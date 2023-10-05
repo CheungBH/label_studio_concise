@@ -1,0 +1,11 @@
+media/
+/label_studio_consise/media/
+/export/
+/history_html/
+*db.sqlite3
+*pycache*
+
+.idea/
+.DS_Store
+/image/templates/image/image_test.html
+.*/
