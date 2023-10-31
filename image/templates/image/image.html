@@ -142,7 +142,6 @@ $("#deleteAnno").attr('onClick', 'Delete_anno();');
 $("#submitData").attr('onClick', 'submit_label();');
 
 function Highlight_data_item(button) {
-    console.log('Highlight_data_item');
    $(".col-2 .active").removeClass("active");
    $(button).addClass("active");
    image.src = "/media/" + button.textContent;
@@ -316,7 +315,6 @@ function reset_rect_shape(rect,x,y,w,h){
 }
 
 function Highlight_Anno(e) {
-    console.log('Highlight_Anno');
     if (e.tagName == "rect"){
         if (rectModify){
             rectModify.removeEventListener("mousedown", modifyAnno);
@@ -376,7 +374,6 @@ function createKeypointButton(button){
 }
 
 function HightLightKeypointButton(button){
-    console.log('HightLightKeypointButton');
     if ( button_keypoint != undefined){
         button_keypoint.classList.remove('active');
     }
@@ -485,7 +482,6 @@ function draw_keypoint(x, y, color, id){
 }
 
 function Highlight_Keypoint(circle){
-    console.log('HightLightKeypointButton');
     if (circle.target){
         keypointModify = circle.target;
     }else{
