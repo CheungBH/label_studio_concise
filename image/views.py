@@ -280,8 +280,8 @@ def UploadJson(request,pk):
     with tempfile.NamedTemporaryFile() as temp:
         for chunk in file.chunks():
             temp.write(chunk)
-        JsonObj =  open(temp.name, "r")
-        Json = json.load(JsonObj)
+        temp.seek(0)  # Move the file pointer back to the beginning of the file
+        Json = json.load(temp)
         coco = CocoApi(Json)
         for ImageIndex in range(coco.ImageNumber()):
             Annotations = coco.GetAnnotation(ImageId=ImageIndex)
